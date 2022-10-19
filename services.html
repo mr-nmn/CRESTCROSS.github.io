@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Services</title>
+    <link rel="icon" type="image/x-icon" href="IMG/fav.png">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -26,10 +27,6 @@
     <!-- animation -->
 
     <style>
-        body {
-            margin-top: 20px;
-        }
-
         /* --------------------------------------------
     ICON LIST
 -------------------------------------------- */
@@ -95,6 +92,22 @@
    -moz-background-size: 100% 100% !important;
    background-size: 100% 100% !important;
    background-position: center center !important;*/
+        }
+
+        .ripple {
+            width: 5px;
+            height: 5px;
+            background-color: transparent;
+            position: fixed;
+            border-radius: 50%;
+            border: 1px solid #F79239;
+        }
+
+        @keyframes ripple-effect {
+            to {
+                transform: scale(15);
+                opacity: 0.01;
+            }
         }
 
         ul.i-list.medium .icon i.fa {
@@ -332,22 +345,22 @@
             <div class="collapse navbar-collapse pe-auto" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto me-5 ">
                     <li class="nav-item">
-                        <a class="nav-link  fs-5 fw-semibold pe-4" aria-current="page" href="/crestcross.github.io">HOME</a>
+                        <a class="nav-link  fs-5 fw-semibold pe-4" aria-current="page" href="index.html">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-5 fw-semibold pe-4 " href="/crestcross.github.io/about us.html">ABOUT US</a>
+                        <a class="nav-link fs-5 fw-semibold pe-4 " href="about us.html">ABOUT US</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-5 fw-semibold pe-4 active" href="/crestcross.github.io/services.html">SERVICES</a>
+                        <a class="nav-link fs-5 fw-semibold pe-4 active" href="services.html">SERVICES</a>
                     </li>
                     <li class="nav-item fs-5 fw-semibold pe-3">
-                        <a class="nav-link " href="/crestcross.github.io/products.html">PRODUCTS</a>
+                        <a class="nav-link " href="products.html">PRODUCTS</a>
                     </li>
                     <li class="nav-item fs-5 fw-semibold pe-3">
-                        <a class="nav-link" href="/crestcross.github.io/video.html">VIDEO DEMONSTRATION</a>
+                        <a class="nav-link" href="video.html">VIDEO DEMONSTRATION</a>
                     </li>
                     <li class="nav-item fs-5 fw-semibold pe-4">
-                        <a class="nav-link " href="/crestcross.github.io/contact.html">CONTACT</a>
+                        <a class="nav-link " href="contact.html">CONTACT</a>
                     </li>
                 </ul>
             </div>
@@ -364,7 +377,9 @@
 
     </div>
     <!-- img -->
-
+    <!-- perloader -->
+    <div id="ripple"></div>
+    <!-- perloader -->
 
     <!--Section: Contact -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
@@ -665,6 +680,24 @@
     <!-- Custom scripts -->
     <script type="text/javascript"></script>
     <!-- js -->
+
+    <script>
+        document.onclick = () => applyCursorRippleEffect(event);
+
+        function applyCursorRippleEffect(e) {
+            const ripple = document.createElement("div");
+
+            ripple.className = "ripple";
+            document.body.appendChild(ripple);
+
+            ripple.style.left = `${e.clientX}px`;
+            ripple.style.top = `${e.clientY}px`;
+
+            ripple.style.animation = "ripple-effect .4s  linear";
+            ripple.onanimationend = () => document.body.removeChild(ripple);
+
+        }
+    </script>
 </body>
 
 </html>

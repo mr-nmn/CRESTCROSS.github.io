@@ -6,7 +6,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>home</title>
+    <title>Home</title>
+
+    <link rel="icon" type="image/x-icon" href="IMG/fav.png">
 
     <link href="lightbox.css" rel="stylesheet" />
 
@@ -26,7 +28,7 @@
     <link rel="stylesheet" href="style.css">
 
     <!-- animation -->
-    
+
 
     <style>
         .map-container-2 {
@@ -59,6 +61,31 @@
             padding: 15px;
             border-radius: 4px;
         }
+
+        #preloader {
+            background: #000 url(IMG/loader.gif) no-repeat center;
+            background-size: 15%;
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            z-index: 100;
+        }
+
+        .ripple {
+            width: 5px;
+            height: 5px;
+            background-color: transparent;
+            position: fixed;
+            border-radius: 50%;
+            border: 1px solid #F79239;
+        }
+
+        @keyframes ripple-effect {
+            to {
+                transform: scale(15);
+                opacity: 0.01;
+            }
+        }
     </style>
 
     <script>
@@ -87,6 +114,14 @@
 </head>
 
 <body class="bg-black">
+
+
+
+
+    <!-- perloader -->
+    <div id="preloader"></div>
+    <!-- perloader -->
+
     <!-- button -->
     <button onclick="topFunction()" id="myBtn" title="Go to top" style="display: block;">Top</button>
     <!-- button -->
@@ -105,22 +140,22 @@
             <div class="collapse navbar-collapse pe-auto" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto me-5 ">
                     <li class="nav-item">
-                        <a class="nav-link active fs-5 fw-semibold pe-4" aria-current="page" href="/crestcross.github.io">HOME</a>
+                        <a class="nav-link active fs-5 fw-semibold pe-4" aria-current="page" href="index.html">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-5 fw-semibold pe-4" href="/crestcross.github.io/about us.html">ABOUT US</a>
+                        <a class="nav-link fs-5 fw-semibold pe-4" href="about us.html">ABOUT US</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-5 fw-semibold pe-4" href="/crestcross.github.io/services.html">SERVICES</a>
+                        <a class="nav-link fs-5 fw-semibold pe-4" href="services.html">SERVICES</a>
                     </li>
                     <li class="nav-item fs-5 fw-semibold pe-3">
-                        <a class="nav-link" href="/crestcross.github.io/products.html">PRODUCTS</a>
+                        <a class="nav-link" href="products.html">PRODUCTS</a>
                     </li>
                     <li class="nav-item fs-5 fw-semibold pe-3">
-                        <a class="nav-link" href="/crestcross.github.io/video.html">VIDEO DEMONSTRATION</a>
+                        <a class="nav-link" href="video.html">VIDEO DEMONSTRATION</a>
                     </li>
                     <li class="nav-item fs-5 fw-semibold pe-4">
-                        <a class="nav-link" href="/crestcross.github.io/contact.html">CONTACT</a>
+                        <a class="nav-link" href="contact.html">CONTACT</a>
                     </li>
                 </ul>
             </div>
@@ -154,6 +189,10 @@
     </div>
     <!-- carousel -->
 
+    <!-- perloader -->
+    <div id="ripple"></div>
+    <!-- perloader -->
+
     <!-- card -->
     <div class="container">
         <div class="row featurette d-flex justify-content-center align-items-center my-4">
@@ -179,7 +218,7 @@
 
         <div class="container">
             <p class="fs-2 text-white fw-bolder">Upcoming Events</p>
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 g-3">
                 <div class="col">
                     <div class="card shadow-sm">
                         <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
@@ -241,33 +280,39 @@
         <p class="fs-2 text-white fw-bolder">Gallery</p>
         <div class="row">
             <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                <a href="img/b1.jpg" data-lightbox="roadtrip" ><img src="img/b1.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water"></a>
+                <a href="IMG/b1.jpg" data-lightbox="roadtrip"><img src="IMG/b1.jpg"
+                        class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water"></a>
                 <!-- <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
                     class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" /> -->
 
-                    <a href="img/b2.jpg" data-lightbox="roadtrip"><img src="img/b2.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Wintry Mountain Landscape"></a>
+                <a href="IMG/b2.jpg" data-lightbox="roadtrip"><img src="IMG/b2.jpg"
+                        class="w-100 shadow-1-strong rounded mb-4" alt="Wintry Mountain Landscape"></a>
                 <!-- <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp"
                     class="w-100 shadow-1-strong rounded mb-4" alt="Wintry Mountain Landscape" /> -->
             </div>
 
             <div class="col-lg-4 mb-4 mb-lg-0">
-                <a href="img/b3.jpg" data-lightbox="roadtrip"><img src="img/b3.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Mountains in the Clouds"></a>
+                <a href="IMG/b3.jpg" data-lightbox="roadtrip"><img src="IMG/b3.jpg"
+                        class="w-100 shadow-1-strong rounded mb-4" alt="Mountains in the Clouds"></a>
                 <!-- <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp"
                     class="w-100 shadow-1-strong rounded mb-4" alt="Mountains in the Clouds" /> -->
-                    
-                    <a href="img/b4.jpg" data-lightbox="roadtrip"><img src="img/b4.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water"></a>
-    
+
+                <a href="IMG/b4.jpg" data-lightbox="roadtrip"><img src="IMG/b4.jpg"
+                        class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water"></a>
+
                 <!-- <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
                     class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" /> -->
             </div>
 
             <div class="col-lg-4 mb-4 mb-lg-0">
-                <a href="img/b5.jpg" data-lightbox="roadtrip"><img src="img/b5.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Waves at Sea"></a>
+                <a href="IMG/b5.jpg" data-lightbox="roadtrip"><img src="IMG/b5.jpg"
+                        class="w-100 shadow-1-strong rounded mb-4" alt="Waves at Sea"></a>
 
                 <!-- <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp"
                     class="w-100 shadow-1-strong rounded mb-4" alt="Waves at Sea" /> -->
 
-                    <a href="img/b6.jpg" data-lightbox="roadtrip"><img src="img/b6.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Yosemite National Park"></a>
+                <a href="IMG/b6.jpg" data-lightbox="roadtrip"><img src="IMG/b6.jpg"
+                        class="w-100 shadow-1-strong rounded mb-4" alt="Yosemite National Park"></a>
 
                 <!-- <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp"
                     class="w-100 shadow-1-strong rounded mb-4" alt="Yosemite National Park" /> -->
@@ -535,13 +580,31 @@
 
     <!-- js -->
 
-	<script>
+    <script>
+        document.onclick = () => applyCursorRippleEffect(event);
+
+        function applyCursorRippleEffect(e) {
+            const ripple = document.createElement("div");
+
+            ripple.className = "ripple";
+            document.body.appendChild(ripple);
+
+            ripple.style.left = `${e.clientX}px`;
+            ripple.style.top = `${e.clientY}px`;
+
+            ripple.style.animation = "ripple-effect .4s  linear";
+            ripple.onanimationend = () => document.body.removeChild(ripple);
+
+        }
+    </script>
+
+    <script>
         lightbox.option({
-          'resizeDuration': 100,
-          'wrapAround': true
+            'resizeDuration': 100,
+            'wrapAround': true
         })
     </script>
-        
+
     <script src="jquery-1.7.js"></script>
     <script src="lightbox.js"></script>
 
@@ -553,6 +616,13 @@
     <!-- Custom scripts -->
     <script type="text/javascript"></script>
     <!-- js -->
+
+    <SCript>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function () {
+            loader.style.display = "none";
+        })
+    </SCript>
 </body>
 
 </html>

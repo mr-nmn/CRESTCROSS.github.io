@@ -4,9 +4,12 @@
 <head>
     <meta charset="utf-8">
 
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Products</title>
+    <link rel="icon" type="image/x-icon" href="IMG/fav.png">
+
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -57,6 +60,22 @@
             padding: 15px;
             border-radius: 4px;
         }
+
+        .ripple {
+            width: 5px;
+            height: 5px;
+            background-color: transparent;
+            position: fixed;
+            border-radius: 50%;
+            border: 1px solid #F79239;
+        }
+
+        @keyframes ripple-effect {
+            to {
+                transform: scale(15);
+                opacity: 0.01;
+            }
+        }
     </style>
 
     <script>
@@ -103,22 +122,22 @@
             <div class="collapse navbar-collapse pe-auto" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto me-5 ">
                     <li class="nav-item">
-                        <a class="nav-link  fs-5 fw-semibold pe-4" aria-current="page" href="/crestcross.github.io">HOME</a>
+                        <a class="nav-link  fs-5 fw-semibold pe-4" aria-current="page" href="index.html">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-5 fw-semibold pe-4 " href="/crestcross.github.io/about us.html">ABOUT US</a>
+                        <a class="nav-link fs-5 fw-semibold pe-4 " href="about us.html">ABOUT US</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-5 fw-semibold pe-4" href="/crestcross.github.io/services.html">SERVICES</a>
+                        <a class="nav-link fs-5 fw-semibold pe-4" href="services.html">SERVICES</a>
                     </li>
                     <li class="nav-item fs-5 fw-semibold pe-3">
-                        <a class="nav-link active" href="/crestcross.github.io/products.html">PRODUCTS</a>
+                        <a class="nav-link active" href="products.html">PRODUCTS</a>
                     </li>
                     <li class="nav-item fs-5 fw-semibold pe-3">
-                        <a class="nav-link" href="/crestcross.github.io/video.html">VIDEO DEMONSTRATION</a>
+                        <a class="nav-link" href="video.html">VIDEO DEMONSTRATION</a>
                     </li>
                     <li class="nav-item fs-5 fw-semibold pe-4">
-                        <a class="nav-link " href="/crestcross.github.io/contact.html">CONTACT</a>
+                        <a class="nav-link " href="contact.html">CONTACT</a>
                     </li>
                 </ul>
             </div>
@@ -128,21 +147,63 @@
 
     <!-- img -->
     <div class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white"
-    style="background-image: url(images/17.jpg);">
-    <h1 class="mb-1 h2 mt-5 fw-bolder" style="color:#F79239;">Products</h1>
-    <p class="text-white fw-bolder fs-3"></p>
-    <p class="text-white mb-5 fw-bolder fs-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa </p>
+        style="background-image: url(images/17.jpg);">
+        <h1 class="mb-1 h2 mt-5 fw-bolder" style="color:#F79239;">Products</h1>
+        <p class="text-white fw-bolder fs-3"></p>
+        <p class="text-white mb-5 fw-bolder fs-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa </p>
 
-</div>
-    <!-- img -->
-
-
-    <!--Section: Contact -->
-    <div class="container my-5">
-        
     </div>
+    <!-- img -->
+    <!-- perloader -->
+    <div id="ripple"></div>
+    <!-- perloader -->
 
-    <!--Section: Contact-->
+    <!-- album -->
+    <div class="album py-5 bg-black ">
+
+        <div class="container">
+            <p class="fs-2 text-white fw-bolder">Meet the minds behind the movement.</p>
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 g-3">
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                            width="" height="" src="https://source.unsplash.com/800x600/?gym," alt="">
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <!-- <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary text-white"
+                                style="background:#F79239;">Read More</button>
+                        </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                            width="" height="500" src="https://source.unsplash.com/800x600/?gym," alt="">
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <!-- <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary text-white"
+                                style="background:#F79239;">Read More</button>
+                        </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- album -->
 
 
 
@@ -294,6 +355,24 @@
     <!-- Custom scripts -->
     <script type="text/javascript"></script>
     <!-- js -->
+
+    <script>
+        document.onclick = () => applyCursorRippleEffect(event);
+
+        function applyCursorRippleEffect(e) {
+            const ripple = document.createElement("div");
+
+            ripple.className = "ripple";
+            document.body.appendChild(ripple);
+
+            ripple.style.left = `${e.clientX}px`;
+            ripple.style.top = `${e.clientY}px`;
+
+            ripple.style.animation = "ripple-effect .4s  linear";
+            ripple.onanimationend = () => document.body.removeChild(ripple);
+
+        }
+    </script>
 </body>
 
 </html>
